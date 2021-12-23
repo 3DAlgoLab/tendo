@@ -84,11 +84,12 @@ class SingleInstance(object):
                 if os.path.isfile(self.lockfile):
                     os.unlink(self.lockfile)
         except Exception as e:
-            if logger:
-                logger.warning(e)
-            else:
-                print("Unloggable error: %s" % e)
-            sys.exit(-1)
+            pass 
+#             if logger:
+#                 logger.warning(e)
+#             else:
+#                 print("Unloggable error: %s" % e)
+#             sys.exit(-1)
 
 
 def f(name):
